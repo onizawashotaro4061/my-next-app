@@ -25,19 +25,32 @@ const ClickCounterPage: React.FC = () => {
   };
 
   return (
-   <div style={{ textAlign: 'center', backgroundColor: '#f0e6f6', padding: '20px', height: '100vh'}}>
+   <div style={{ 
+    textAlign: 'center', 
+    background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)', 
+    padding: '20px', 
+    height: '100vh',
+    }}>
       {/* ページ上部の画像 */}
-       <Image src="/images/king.png" 
+       <Image src="/images/logo_transparent.png" 
        width={300}
        height={300}
        alt="Example Image" style={{
           width: '100%',
           height: 'auto',
           marginBottom: '20px' }} />
-
+    <h1>あなたがなりたい職業を選んでね！</h1>
       {/* ボタンの配置 */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-        <ClickButton onClick={handleClickA} count={clickCounts[0]} label="魔術師" color="red" />
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '20px',
+        justifyContent: 'center',
+        width: '100%',
+        marginBottom: '20px',
+        borderRadius: '5px',
+        }}>
+        <ClickButton onClick={handleClickA} count={clickCounts[0]} label="魔術師" color="red"  />
         <ClickButton onClick={handleClickB} count={clickCounts[1]} label="冒険家" color="blue" />
       </div>
     </div>

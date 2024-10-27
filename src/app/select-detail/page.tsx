@@ -54,14 +54,19 @@ export default function SelectDetail() {
       height: '100vh'
       }}>
         
-      <Image src="/images/king.png" 
+      <Image src="/images/logo_transparent.png"
       width={300}
        height={300}
       alt="Example Image" style={{
           width: '100%',
           height: 'auto',
           marginBottom: '20px' }} />
-      <h1 style={{ marginBottom: '20px' }}>あなたのことを教えてね</h1>
+
+      <h1 style={{ 
+        marginBottom: '20px',
+        color: 'black',
+        fontSize: '20px',
+        }}>あなたのことを教えてね</h1>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
         <button 
           onClick={() => setGender('男性')}

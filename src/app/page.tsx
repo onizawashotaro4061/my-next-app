@@ -4,30 +4,6 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 export default function ClickLink() {
-  const router = useRouter();
-
-  const handleLinkClick = async (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault(); // デフォルトのリンク遷移をキャンセル
-
-    // APIにPOSTリクエストを送信して、クリック数を更新
-    const res = await fetch('/api/click', {
-      method: 'POST',
-      body: JSON.stringify({ label: 'Go to Click Counter' }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    const data = await res.json();
-    if (data.error) {
-      console.error('Failed to update click count');
-    } else {
-      console.log('Click count updated:', data.count);
-    }
-
-    // POSTリクエスト完了後、遷移を実行
-    router.push('/select-detail');
-  };
 
   return (
     <div style={{
@@ -50,7 +26,7 @@ export default function ClickLink() {
           width: '100%',
           maxWidth: '600px',
           marginBottom: '20px' }} />
-      <a href="/click-counter" onClick={handleLinkClick} style={{ textDecoration: 'none' }}>
+      <a href="/select-detail" style={{ textDecoration: 'none' }}>
         <button style={{
           fontSize: '24px',
           padding: '15px 50px',
