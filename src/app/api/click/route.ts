@@ -1,16 +1,24 @@
+// src/app/api/click/route.ts
 import { NextResponse } from 'next/server';
-import prisma from '../../../../lib/prisma'; // 正しいインポートパス
+import prisma from '../../../../lib/prisma';
 
-export async function POST() {
+export async function POST(request: Request) {
+  const body = await request.json();
+  const { course } = body;
+
+  if (course !== 'A' && course !== 'B') {
+    return NextResponse.json({ error: 'Invalid course' }, { status: 400 });
+  }
+
   try {
-    const click = await prisma.click.create({
-      data: {
-        count: 1, // クリックを1記録
-      },
+    const click = await prisma.click.upsert({
+      where: { id: course === 'A' ? 1 : 2 }, // Aコースはid=1、Bコースはid=2
+      update: { count: { increment: 1 } },
+      create: { count: 1, course: course }, // labelは適宜使用
     });
-    return NextResponse.json(click);
-  } catch (error) {
-    console.error('DBエラー:', error);
-    return NextResponse.json({ message: 'クリック数の記録に失敗しました。' }, { status: 500 });
+
+    return NextResponse.json({ count: click.count });
+  } catch {
+    return NextResponse.json({ error: 'Failed to update click count' }, { status: 500 });
   }
 }
