@@ -14,6 +14,37 @@ datasource db {
 }
 
 model Click {
-  id    Int @id @default(autoincrement())
-  count Int @default(0)
+  id        Int      @id @default(autoincrement())
+  course    String   @default("default_course") // デフォルト値を設定
+  count     Int      @default(0)
+  createdAt DateTime @default(now())
 }
+
+model KeywordAttempt {
+  id      Int     @id @default(autoincrement())
+  course  String  @default("default_course") // デフォルト値を設定
+  step    Int
+  attempts Int    @default(0)
+}
+
+
+model Participation {
+  id     Int    @id @default(autoincrement()) // 一意のIDを持つ
+  course  String @default("default_course") // デフォルト値を設定
+  step   Int    // ステップ番号（問題の番号）
+  count  Int    @default(0) // クリック数のカウント
+}
+
+model GenderAge {
+  id      Int     @id @default(autoincrement())
+  gender  String  // "男性" or "女性"
+  age     Int
+}
+
+model ClickCounts {
+  id           Int      @id @default(autoincrement())
+  course       String
+  label        String
+  correctClick Boolean
+}
+
