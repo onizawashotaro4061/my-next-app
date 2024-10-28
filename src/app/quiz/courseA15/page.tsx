@@ -15,6 +15,10 @@ const QuizCourseA: React.FC = () => {
   // ストーリーと画像の配列
   const stories = [
     {
+      text: '正解！ \n\n',
+      image: '/images',
+    },
+    {
       text: '威力を倍増してくれる杖を手に入れた！これで強い敵にも立ち向かえる。 \n\n',
       image: '/images/MagicRoom.png',
       overlayImage: '/images/cane_blue.png',

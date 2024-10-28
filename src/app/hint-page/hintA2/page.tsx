@@ -9,11 +9,11 @@ import Image from 'next/image';
 const HintPage: React.FC = () => {
   const [keywordInput, setKeywordInput] = useState('');
   const router = useRouter();
-  const correctKeyword = 'ことゆめ'; // 正しいキーワードを指定
+  const correctKeyword = 'mage'; // 正しいキーワードを指定
 
   const handleKeywordSubmit = () => {
     if (keywordInput === correctKeyword) {
-      router.push('/quiz/courseA13'); // 正しいキーワードの場合の遷移先
+      router.push('/quiz/courseA17'); // 正しいキーワードの場合の遷移先
     } else {
       alert('正しいキーワードを入力してください。');
     }

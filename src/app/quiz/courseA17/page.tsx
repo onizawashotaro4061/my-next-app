@@ -57,7 +57,7 @@ const QuizCourseA: React.FC = () => {
     router.push('/quiz/courseA18');
   };
 
-  const participationLabel = "戦史研究会"; // ここで企画名を設定
+  const participationLabel = "〇〇"; // ここで企画名を設定
   return (
     <div>
       {/* ストーリーコンポーネントの呼び出し */}

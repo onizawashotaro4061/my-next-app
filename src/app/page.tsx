@@ -55,6 +55,22 @@ export default function ClickLink() {
           START
         </button>
       </a>
+      <a href="/sample">
+      <button style={{
+        fontSize: '16px',
+        padding: '10px 40px',
+        backgroundColor: '#4a90e2',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        marginTop: '20px',
+        marginBottom: '10px',
+        fontFamily: '"Cinzel", serif',                    // 古��なフォント
+        transition: 'transform 0.2s',
+        textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
+      }}>例題</button>
+      </a>
     </div>
   );
 }
