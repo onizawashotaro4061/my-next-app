@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ClickLink() {
 
@@ -25,7 +26,7 @@ export default function ClickLink() {
           width: '100%',
           maxWidth: '600px',
           marginBottom: '20px' }} />
-      <a href="/">
+      <Link href="/">
       <button style={{
         fontSize: '16px',
         padding: '10px 40px',
@@ -40,7 +41,7 @@ export default function ClickLink() {
         transition: 'transform 0.2s',
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
       }}>戻る</button>
-      </a>
+      </Link>
     </div>
   );
 }
