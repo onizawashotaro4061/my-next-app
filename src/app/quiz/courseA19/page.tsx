@@ -54,7 +54,7 @@ const QuizCourseA: React.FC = () => {
 
   const handleNext = () => {
     // ページ遷移処理
-    router.push('/click-counter');
+    router.push('/quiz/courseA20');
   };
 
   const participationLabel = "〇〇"; // ここで企画名を設定

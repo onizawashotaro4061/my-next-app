@@ -30,7 +30,14 @@ const ClickButton: React.FC<ClickButtonProps> = ({ onClick, label, color }) => {
   return (
     <div>
       <button  onClick={handleClick} 
-        style={{ backgroundColor: color, color: '#fff', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+        style={{ 
+          backgroundColor: color, 
+          color: '#fff', 
+          padding: '10px 20px', 
+          border: 'none', 
+          borderRadius: '5px', 
+          cursor: 'pointer',
+          marginTop: '10px', }}>
           {label}</button>
     </div>
   );
