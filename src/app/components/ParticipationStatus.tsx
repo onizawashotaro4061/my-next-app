@@ -65,7 +65,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
     <div>
       {hasParticipated === null ? (
         <div>
-           <p>{`${participationLabel}に参加しましたか？`}</p> {/* ここを修正 */}
+           <p>{`${participationLabel}の企画に参加しましたか？`}</p> {/* ここを修正 */}
           <ClickButton
             label="参加した"
             onClick={() => handleParticipation(true)}

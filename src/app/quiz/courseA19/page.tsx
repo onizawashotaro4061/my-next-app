@@ -15,7 +15,7 @@ const QuizCourseA: React.FC = () => {
   const stories = [
     {
       text: '正解\n\n',
-      image: '/images/answer2.png',
+      image: '/images/QA2a.jpg',
     },
     {
       text: '魔導書に文字が浮かび上がった。ここに書かれているのは…。「雄大なる氷の精霊にして天を潤わせし氷帝よ！」そう唱えると、魔導書は魔術を放ち大蛇を凍らせた。\n\n',

@@ -26,7 +26,7 @@ const QuizCourseA: React.FC = () => {
       image: '/images/king.png',
     },
     {
-      text: '目が覚めたら、異世界の知らない王国の宿にいた。\nとりあえず街へ出たところ、「別世界へ行けるアイテムが迷宮にある」という噂を聞いた。\nそのアイテムを手に入れれば、元の世界へ戻れるかもしれない！\n魔術を覚えて、装備を整えて、いざ、迷宮へ！ \n\n',
+      text: '目が覚めたら、異世界の知らない王国の宿にいた。とりあえず街へ出たところ、「別世界へ行けるアイテムが迷宮にある」という噂を聞いた。そのアイテムを手に入れれば、元の世界へ戻れるかもしれない！魔術を覚えて、装備を整えて、いざ、迷宮へ！ \n\n',
       image: '/images/king.png',
     },
     {
@@ -75,10 +75,13 @@ const QuizCourseA: React.FC = () => {
     router.push(url);
   };
 
-  const participationLabel = "〇〇"; // ここで企画名を設定
+  const participationLabel = "地理学研究部"; // ここで企画名を設定
 
   return (
-    <div>
+    <div style={{
+      background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
+      height: '100vh',
+    }}>
       {/* ストーリーコンポーネントの呼び出し */}
       <StoryComponent
         stories={stories}

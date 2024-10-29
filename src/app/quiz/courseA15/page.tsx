@@ -16,7 +16,7 @@ const QuizCourseA: React.FC = () => {
   const stories = [
     {
       text: '正解！ \n\n',
-      image: '/images',
+      image: '/images/QA1a.jpg',
     },
     {
       text: '威力を倍増してくれる杖を手に入れた！これで強い敵にも立ち向かえる。 \n\n',

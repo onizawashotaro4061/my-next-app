@@ -16,7 +16,7 @@ export default function ClickLink() {
       color: '#fff',
       padding: '0 20px',
           }}>
-      <Image 
+      <Image
       src="/images/logo_transparent.png"
       width={300}
       height={300}

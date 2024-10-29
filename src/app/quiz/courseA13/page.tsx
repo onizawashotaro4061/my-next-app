@@ -9,6 +9,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = '読み聞かせ';
+  // ひらがなも追加する
 
   const stories = [
     {
@@ -71,7 +72,10 @@ const QuizCourseA: React.FC = () => {
   const participationLabel = "〇〇"; // ここで企画名を設定
 
   return (
-    <div>
+    <div style={{
+      background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
+      height: '100vh',
+    }}>
       <StoryComponent
         stories={stories}
         onParticipationChange={handleParticipation}
