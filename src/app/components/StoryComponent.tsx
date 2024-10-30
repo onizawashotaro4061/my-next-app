@@ -18,8 +18,8 @@ interface StoryComponentProps {
   stories: Story[];
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void;
-  correctKeyword: string[];
-  correctHint: string[];
+  correctKeyword: string;
+  correctHint: string;
   course: string;
   step: number;
   onNext: () => void;
@@ -42,9 +42,9 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
   const [keywordInput, setKeywordInput] = useState('');
   const handleKeywordSubmit = () => {
-    if (correctKeyword.includes(keywordInput)) {
+    if (keywordInput === correctKeyword) {
       onNext(); // 正しいキーワードの遷移先
-    } else if (correctHint.includes(keywordInput)) {
+    } else if (keywordInput === correctHint) {
       onHint();
     } else {
       alert('正しいキーワードを入力してください。');

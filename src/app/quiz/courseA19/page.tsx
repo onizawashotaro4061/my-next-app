@@ -7,13 +7,13 @@ import StoryComponent from '@/app/components/StoryComponent';
 
 const QuizCourseA: React.FC = () => {
   const router = useRouter();
-  const correctKeyword = ['迷Q伝説'];
-  const correctHint = ['迷Q伝説'];
+  const correctKeyword = '迷Q伝説';
+  const correctHint = '迷Q伝説';
 
   // ストーリーと画像の配列
   const stories = [
     {
-      text: '【ダンジョン進行度????】\n正解！\n\n',
+      text: '正解\n\n',
       image: '/images/QA2a.jpg',
     },
     {

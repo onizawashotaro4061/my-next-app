@@ -16,8 +16,9 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = ['白地図','はくちず'];
-  const correctHint = ['白地図','はくちず'];
+  const correctKeyword = '白地図';
+  const correctHint = '白地図';
+   
 
   // ストーリーと画像の配列
   const stories: Story[] = [
@@ -80,7 +81,7 @@ const QuizCourseA: React.FC = () => {
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
-      height: '100svh',
+      height: '100vh',
     }}>
       {/* ストーリーコンポーネントの呼び出し */}
       <StoryComponent
