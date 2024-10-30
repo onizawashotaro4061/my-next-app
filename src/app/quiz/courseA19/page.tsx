@@ -1,7 +1,6 @@
 // src/app/QuizCourseA.tsx
 "use client";
 
-import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // これは正しいインポートです
 import StoryComponent from '@/app/components/StoryComponent';
 
