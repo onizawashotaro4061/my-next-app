@@ -23,7 +23,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
 }) => {
   const [hasParticipated, setHasParticipated] = useState<boolean | null>(null);
   const [keyword, setKeyword] = useState('');
-  const [keywordInput, setKeywordInput] = useState('');
+  const [keywordInput,] = useState('');
   const [showWarning, setShowWarning] = useState('');
 
   const handleParticipation = async (participated: boolean) => {
