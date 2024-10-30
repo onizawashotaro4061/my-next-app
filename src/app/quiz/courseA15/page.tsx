@@ -10,12 +10,12 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = '舞';
-
+  const correctHint = '舞';
 
   // ストーリーと画像の配列
   const stories = [
     {
-      text: '正解！ \n\n',
+      text: '【ダンジョン進行度★★☆☆】\n正解！ \n\n',
       image: '/images/QA1a.jpg',
     },
     {
@@ -63,18 +63,23 @@ const QuizCourseA: React.FC = () => {
   };
 
 
-  const participationLabel = "〇〇"; // ここで企画名を設定
+  const participationLabel = "能楽研究会観世会"; // ここで企画名を設定
   return (
-    <div>
+    <div style={{
+      background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
+      height: '100vh',
+    }}>
       {/* ストーリーコンポーネントの呼び出し */}
       <StoryComponent
         stories={stories}
         onParticipationChange={handleParticipation}
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
+        correctHint={correctHint}
         course="A" // courseを指定
         step={5}   // stepを指定
         onNext={handleNext} // onNext関数を渡す
+        onHint={handleNext}
         participationLabel={participationLabel} // 企画名を渡す
       />
     </div>

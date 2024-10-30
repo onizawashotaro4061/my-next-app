@@ -19,9 +19,11 @@ interface StoryComponentProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void;
   correctKeyword: string;
+  correctHint: string;
   course: string;
   step: number;
-  onNext: (url: string) => void;
+  onNext: () => void;
+  onHint: () => void;
   participationLabel: string;
 }
 
@@ -30,17 +32,24 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   onParticipationChange,
   onParticipationConfirmed,
   correctKeyword,
+  correctHint,
   course,
   step,
   onNext,
+  onHint,
   participationLabel,
 }) => {
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
-
+  const [keywordInput, setKeywordInput] = useState('');
   const handleKeywordSubmit = () => {
-    // キーワードのチェックをここで実装
+    if (keywordInput === correctKeyword) {
+      onNext(); // 正しいキーワードの遷移先
+    } else if (keywordInput === correctHint) {
+      onHint();
+    } else {
+      alert('正しいキーワードを入力してください。');
+    }
   };
-
   const handleNextStory = () => {
     if (currentStoryIndex < stories.length - 1) {
       setCurrentStoryIndex(currentStoryIndex + 1);
@@ -54,7 +63,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   };
 
   return (
-     <div style={{ textAlign: 'center', padding: '20px', height: '100vh'}}>
+     <div style={{ padding: '20px', height: '100vh'}}>
       <OverlayImageComponent
         baseImage={stories[currentStoryIndex].image}
         overlayImage={stories[currentStoryIndex].overlayImage}
@@ -63,14 +72,12 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
         style={{ 
           width: '100%',
           height: 'auto',
-          // borderRadius: '8px',
           marginBottom: '10px' }}
       />
 
       <div
         style={{
           border: '2px solid #4a90e2',
-          // borderRadius: '8px',
           padding: '20px',
           backgroundColor: '#f5f5f5',
           color: 'black',
@@ -121,14 +128,18 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           )}
         </div>
       </div>
-
+      <div style={{
+        textAlign: 'center',
+      }}>
       {/* participationStatusがtrueのときのみ参加状況の表示 */}
       {stories[currentStoryIndex].participationStatus && (
         <ParticipationStatus
           onParticipationChange={onParticipationChange}
           onParticipationConfirmed={onParticipationConfirmed}
           correctKeyword={correctKeyword}
+          correctHint={correctHint}
           onNext={onNext}
+          onHint={onHint}
           participationLabel={participationLabel}
         />
       )}
@@ -136,13 +147,14 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
       {/* AnswerFormの表示制御 */}
       {stories[currentStoryIndex].answerFormProps && (
         <AnswerForm
-          keywordInput={''}
-          setKeywordInput={() => {}}
+          keywordInput={keywordInput}
+          setKeywordInput={setKeywordInput}
           onSubmit={handleKeywordSubmit}
           course={course}
           step={step}
         />
       )}
+      </div>
     </div>
   );
 };

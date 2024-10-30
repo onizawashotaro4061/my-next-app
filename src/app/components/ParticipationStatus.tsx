@@ -6,7 +6,9 @@ interface ParticipationStatusProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void; // 参加確認のためのコールバック
   correctKeyword: string;
+  correctHint: string;
   onNext: (url: string) => void; // ページ遷移のためのコールバック
+  onHint: (url: string) => void;
   participationLabel: string; // 参加する企画の名称
 }
 
@@ -14,7 +16,9 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
   onParticipationChange,
   onParticipationConfirmed,
   correctKeyword,
+  correctHint,
   onNext,
+  onHint,
   participationLabel, // 追加: 参加する企画の名称
 }) => {
   const [hasParticipated, setHasParticipated] = useState<boolean | null>(null);
@@ -56,7 +60,9 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
           step: 1,
         }),
       });
-    } else {
+    } else if(keyword === correctHint) {
+      onHint('');
+    }else {
       setShowWarning('キーワードが間違っています。もう一度入力してください。');
     }
   };
@@ -65,7 +71,11 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
     <div>
       {hasParticipated === null ? (
         <div>
-           <p>{`${participationLabel}の企画に参加しましたか？`}</p> {/* ここを修正 */}
+           <p style={{
+            color: 'black',
+            marginTop: '10px',
+            marginBottom: '10px',
+          }}>{`${participationLabel}の企画に参加しましたか？`}</p> {/* ここを修正 */}
           <ClickButton
             label="参加した"
             onClick={() => handleParticipation(true)}
@@ -81,14 +91,39 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
         </div>
       ) : (
         <div>
-          <p>キーワードを入力してください。</p>
+          {/* 入力してください */}
+          <p style={{
+            color: 'black',
+            marginTop: '10px',
+            marginBottom: '10px',
+            height: '40px',
+          }}></p>
           <input
             type="text"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            style={{ color: 'black', textAlign: 'center' }}
+            style={{ 
+              color: 'black',
+              paddingTop: '10px',
+              paddingBottom: '10px',
+              textAlign: 'center',
+              width: '80%',
+              borderRadius: '5px',
+            }}
+            placeholder="入力する"
           />
-          <button onClick={checkKeyword}>送信</button>
+          <div>
+          <button onClick={checkKeyword} style={{
+            padding: '10px 20px',
+            backgroundColor: '#0070f3',
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            marginTop: '30px',
+            width: '80%',
+          }}>送信</button>
+          </div>
           {showWarning && <p style={{ color: 'red' }}>{showWarning}</p>}
         </div>
       )}

@@ -27,6 +27,8 @@ const Page: React.FC = () => {
     router.push(url);
   };
 
+  const participationLabel = "模型部";
+
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
@@ -42,6 +44,7 @@ const Page: React.FC = () => {
         step={2}   // stepを指定
         onNext={() => handleNext('/quiz/courseA13')} // 正解時の遷移先を指定
         onHint={() => handleHint('/hint-page/hintA1')} // ヒント時の遷移先を指定
+        participationLabel={participationLabel} // 企画名を渡す
       />
     </div>
   );

@@ -34,16 +34,37 @@ const AnswerForm: React.FC<AnswerFormProps> = ({ keywordInput, setKeywordInput, 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}
+    style={{
+      textAlign: 'center',
+    }}>
       <input
         type="text"
         value={keywordInput}
         onChange={(e) => setKeywordInput(e.target.value)}
-        placeholder="キーワードを入力"
-        style={{ color: 'black', textAlign: 'center' }}
+        placeholder="入力する"
+        style={{
+              color: 'black',
+              paddingTop: '10px',
+              paddingBottom: '10px',
+              textAlign: 'center',
+              width: '80%',
+              borderRadius: '5px',
+              marginTop: '20px',
+        }}
         required
       />
-      <button type="submit">送信</button>
+      <button onClick={handleSubmit}
+      type="submit" style={{
+            padding: '10px 20px',
+            backgroundColor: '#0070f3',
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            marginTop: '30px',
+            width: '80%',
+          }}>送信</button>
     </form>
   );
 };

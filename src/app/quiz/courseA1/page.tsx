@@ -17,6 +17,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = '白地図';
+  const correctHint = '白地図';
    
 
   // ストーリーと画像の配列
@@ -88,9 +89,11 @@ const QuizCourseA: React.FC = () => {
         onParticipationChange={handleParticipation}
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
+        correctHint={correctHint}
         course="A" // courseを指定
         step={1}   // stepを指定
-        onNext={() => handleNext('/quiz/courseA12')} // 正しいページ遷移を指定
+        onNext={() => handleNext('/quiz/courseA12')} 
+        onHint={() => handleNext('/quiz/courseA12')} 
         participationLabel={participationLabel} // 企画名を渡す
       />
     </div>

@@ -9,11 +9,12 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = '読み聞かせ';
+  const correctHint = '読み聞かせ';
   // ひらがなも追加する
 
   const stories = [
     {
-      text: '正解\n\n',
+      text: '【ダンジョン進行度★☆☆☆】\n正解！ \n\n',
       image: '/images/A1a.jpg',
     },
     {
@@ -69,7 +70,7 @@ const QuizCourseA: React.FC = () => {
     router.push('/quiz/courseA14');
   };
 
-  const participationLabel = "〇〇"; // ここで企画名を設定
+  const participationLabel = "絵本工房"; // ここで企画名を設定
 
   return (
     <div style={{
@@ -81,9 +82,11 @@ const QuizCourseA: React.FC = () => {
         onParticipationChange={handleParticipation}
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
+        correctHint={correctHint}
           course="A" // courseを指定
         step={3}   // stepを指定
         onNext={handleNext} // onNext関数を渡す
+        onHint={handleNext}
         participationLabel={participationLabel} // 企画名を渡す
       />
     </div>

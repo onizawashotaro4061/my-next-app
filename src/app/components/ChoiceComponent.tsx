@@ -54,35 +54,64 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column',
+      height: '100vh',
+    }}>
       {/* 画面上部に画像を表示 */}
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image src={imageUrl} alt="問題の画像" 
-        width={300}
-       height={300}
-        style={{ maxHeight: '80%', maxWidth: '100%' }} />
+      <Image src={imageUrl} alt="画像" width={300} height={300} style={{
+        marginTop: '50px',
+        maxHeight: '80%',
+        maxWidth: '100%',
+        width: '100%',
+      }} />
+      <div
+        style={{
+          border: '2px solid #4a90e2',
+          padding: '20px',
+          backgroundColor: '#f5f5f5',
+          color: 'black',
+          marginBottom: '10px',
+          width: '100%',
+        }}
+      >
+        <p style={{ 
+          fontSize: '18px',
+          textAlign: 'left',
+          }}>
+            正しいと思う番号を押してね！
+            <br />
+            何回でも解答していただけます
+        </p>
       </div>
 
       {/* 画面下部に5つのボタンを表示 */}
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+      <div style={{ 
+        marginTop: '50px',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+      }}>
         {[1, 2, 3, 4, 5].map((num) => (
-          <div key={num} style={{ textAlign: 'center' }}>
-            <button
-              onClick={() => handleAnswerClick(num)}
-              style={{
-                padding: '10px 20px',
-                fontSize: '16px',
-                backgroundColor: selectedAnswer === num ? (isCorrect ? 'green' : 'red') : 'gray',
-              }}
-            >
-              選択 {num}
-            </button>
-            {selectedAnswer === num && !isCorrect && errorMessage && (
-              <p style={{ color: 'red', marginTop: '10px' }}>{errorMessage}</p>
-            )}
-          </div>
+          <button
+            key={num}
+            onClick={() => handleAnswerClick(num)}
+            style={{
+              padding: '20px 30px',
+              fontSize: '20px',
+              backgroundColor: selectedAnswer === num ? (isCorrect ? 'green' : 'red') : '#0070f3',
+            }}
+          >
+            {num}
+          </button>
         ))}
       </div>
+
+      {/* 不正解のメッセージをボタン全体の下に表示 */}
+      {selectedAnswer !== correctAnswer && errorMessage && (
+        <p style={{ color: 'red', marginTop: '20px', textAlign: 'center' }}>{errorMessage}</p>
+      )}
     </div>
   );
 };

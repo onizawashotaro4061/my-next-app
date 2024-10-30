@@ -15,10 +15,10 @@ export default function ClickLink() {
       alignItems: 'center',
       textAlign: 'center',
       color: '#fff',
-      padding: '0 20px',
+      padding: '0 10px',
           }}>
       <Image 
-      src="/images/clear.jpg"
+      src="/images/ClearA.png"
       width={300}
       height={300}
        alt="Example Image"
@@ -26,6 +26,19 @@ export default function ClickLink() {
           width: '100%',
           maxWidth: '600px',
           marginBottom: '20px' }} />
+          <p style={{
+            color: 'black',
+            margin: '10px auto',
+          }}>
+            クリアおめでとう！
+            <br />ゴール教室（メディア棟M512教室）に向かおう！
+          </p>
+          <p style={{
+            color: 'red',
+            fontSize: '20px',
+          }}>
+            ※この画面は消さないでね
+          </p>
       <Link href="/">
       <button style={{
         fontSize: '16px',

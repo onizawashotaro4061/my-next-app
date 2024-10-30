@@ -7,7 +7,10 @@ const Page: React.FC = () => {
   // ページ遷移処理
 
   return (
-    <div>
+    <div style={{
+      background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
+      height: '100vh',
+    }}>
       <ChoiceComponent
         imageUrl="/images/QA2.jpg"  // 画面上部に表示する画像のパス
         correctAnswer={3}  // 正解の番号

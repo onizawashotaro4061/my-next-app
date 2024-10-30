@@ -1,44 +1,79 @@
-// src/app/hint-page/page.tsx
+// src/app/QuizCourseA.tsx
 "use client";
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import AnswerForm from '@/app/components/AnswerForm';
-import Image from 'next/image';
+import StoryComponent from '@/app/components/StoryComponent';
 
-const HintPage: React.FC = () => {
-  const [keywordInput, setKeywordInput] = useState('');
+interface Story {
+  text: string;
+  image: string;
+  overlayImage?: string;
+  participationStatus?: boolean;
+}
+
+const QuizCourseA: React.FC = () => {
+  const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
-  const correctKeyword = 'ことゆめ'; // 正しいキーワードを指定
 
-  const handleKeywordSubmit = () => {
-    if (keywordInput === correctKeyword) {
-      router.push('/quiz/courseA13'); // 正しいキーワードの場合の遷移先
-    } else {
-      alert('正しいキーワードを入力してください。');
+  const correctKeyword = 'ことゆめ';
+  const correctHint = 'ことゆめ';
+
+  // ストーリーと画像の配列
+  const stories: Story[] = [
+    {
+      text: '答えを入力しよう！\n\n',
+      image: '/images/A1h.jpg',
+      participationStatus: true,
+    },
+  ];
+
+  const handleParticipation = async (participated: boolean) => {
+    setHasParticipated(participated);
+    try {
+      await fetch('/api/participation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          course: 'A',
+          step: 1,
+          participated: participated,
+        }),
+      });
+    } catch (error) {
+      console.error('参加情報の送信に失敗しました:', error);
     }
   };
 
-  return (
-    <div style={{ textAlign: 'center' }}>
-      <Image src="/images/A1h.jpg" 
-      width={300}
-       height={300}
-      alt="ヒント画像" style={{ width: '100%', borderRadius: '8px' }} />
-      {/* 他のコンテンツや情報もここに追加できます */}
-      <p style={{marginTop: '20px'}}>答えを入力してください。</p>
-      
-      {/* AnswerForm コンポーネントを使用 */}
-      <AnswerForm
-        keywordInput={keywordInput}
-        setKeywordInput={setKeywordInput}
-        onSubmit={handleKeywordSubmit}
-        course="A"  // ここでコース名を設定
-        step={101}    // ここでステップを設定
-/>
+  const handleNext = (url: string) => {
+    // 動的に指定されたURLにページ遷移
+    router.push(url);
+  };
 
+  const participationLabel = "模型部"; // ここで企画名を設定
+
+  return (
+    <div style={{
+      background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
+      height: '100vh',
+    }}>
+      {/* ストーリーコンポーネントの呼び出し */}
+      <StoryComponent
+        stories={stories}
+        onParticipationChange={handleParticipation}
+        onParticipationConfirmed={() => console.log('参加が確認されました')}
+        correctKeyword={correctKeyword}
+        correctHint={correctHint}
+        course="A" // courseを指定
+        step={1}   // stepを指定
+        onNext={() => handleNext('/quiz/courseA13')} 
+        onHint={() => handleNext('/quiz/courseA13')} // 正しいページ遷移を指定
+        participationLabel={participationLabel} // 企画名を渡す
+      />
     </div>
   );
 };
 
-export default HintPage;
+export default QuizCourseA;
