@@ -5,8 +5,8 @@ import ClickButton from './ClickButton';
 interface ParticipationStatusProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void; // 参加確認のためのコールバック
-  correctKeyword: string;
-  correctHint: string;
+  correctKeyword: string[];
+  correctHint: string[];
   onNext: (url: string) => void; // ページ遷移のためのコールバック
   onHint: (url: string) => void;
   participationLabel: string; // 参加する企画の名称
@@ -23,6 +23,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
 }) => {
   const [hasParticipated, setHasParticipated] = useState<boolean | null>(null);
   const [keyword, setKeyword] = useState('');
+  const [keywordInput, setKeywordInput] = useState('');
   const [showWarning, setShowWarning] = useState('');
 
   const handleParticipation = async (participated: boolean) => {
@@ -47,7 +48,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
   };
 
   const checkKeyword = async () => {
-    if (keyword === correctKeyword) {
+    if (correctKeyword.includes(keywordInput)) {
       setShowWarning('');
       onNext(''); // 正しいキーワードの場合にページ遷移
       await fetch('/api/keyword', {
@@ -60,7 +61,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
           step: 1,
         }),
       });
-    } else if(keyword === correctHint) {
+    } else if(correctHint.includes(keywordInput)) {
       onHint('');
     }else {
       setShowWarning('キーワードが間違っています。もう一度入力してください。');
