@@ -59,7 +59,7 @@ const QuizCourseA: React.FC = () => {
 
   const handleNext = () => {
     // ページ遷移処理
-    router.push('/quiz/courseA16');
+    router.push('/quiz/A6');
   };
 
 

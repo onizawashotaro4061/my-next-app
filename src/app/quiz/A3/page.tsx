@@ -67,7 +67,7 @@ const QuizCourseA: React.FC = () => {
       }),
     });
 
-    router.push('/quiz/courseA14');
+    router.push('/quiz/A4');
   };
 
   const participationLabel = "絵本工房"; // ここで企画名を設定

@@ -14,14 +14,14 @@ const ClickCounterPage: React.FC = () => {
     const newCounts = [...clickCounts];
     newCounts[0] += 1;
     setClickCounts(newCounts);
-    router.push('/quiz/courseA1');
+    router.push('/quiz/A1');
   };
 
   const handleClickB = async () => {
     const newCounts = [...clickCounts];
     newCounts[1] += 1;
     setClickCounts(newCounts);
-    router.push('/quiz/courseB1');
+    router.push('/quiz/B1');
   };
 
   return (

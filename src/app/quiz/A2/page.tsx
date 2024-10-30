@@ -6,14 +6,14 @@ import StoryComponentNosign from '@/app/components/StoryComponentNosign';
 
 const Page: React.FC = () => {
   const router = useRouter();
-  const correctKeyword = 'mage';
-  const correctHint = '留学生';
+  const correctKeyword = 'ことゆめ';
+  const correctHint = 'プラモデル';
 
   // ストーリーのデータ
   const stories = [
     {
-      text: '問題が現れた！ヒントが欲しい人は第一校舎の306教室へ行って、キーワードを手に入れよう！\n\n',
-      image: '/images/A2.jpg',
+      text: '問題が現れた！ヒントが欲しい人は和泉ラーニングスクエアのLS302教室へ行って、キーワードを手に入れよう！\n\n',
+      image: '/images/A1.jpg',
       answerFormProps: true,
     }
   ];
@@ -42,9 +42,9 @@ const Page: React.FC = () => {
         correctHint={correctHint}
         course="A" // courseを指定
         step={2}   // stepを指定
-        onNext={() => handleNext('/quiz/courseA17')} // 正解時の遷移先を指定
-        onHint={() => handleHint('/hint-page/hintA2')} // ヒント時の遷移先を指定
-        participationLabel={participationLabel}
+        onNext={() => handleNext('/quiz/A3')} // 正解時の遷移先を指定
+        onHint={() => handleHint('/hint/A3')} // ヒント時の遷移先を指定
+        participationLabel={participationLabel} // 企画名を渡す
       />
     </div>
   );

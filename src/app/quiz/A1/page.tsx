@@ -92,8 +92,8 @@ const QuizCourseA: React.FC = () => {
         correctHint={correctHint}
         course="A" // courseを指定
         step={1}   // stepを指定
-        onNext={() => handleNext('/quiz/courseA12')} 
-        onHint={() => handleNext('/quiz/courseA12')} 
+        onNext={() => handleNext('/quiz/A2')} 
+        onHint={() => handleNext('/quiz/A2')} 
         participationLabel={participationLabel} // 企画名を渡す
       />
     </div>

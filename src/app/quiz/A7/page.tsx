@@ -55,7 +55,7 @@ const QuizCourseA: React.FC = () => {
 
   const handleNext = () => {
     // ページ遷移処理
-    router.push('/quiz/courseA18');
+    router.push('/quiz/A8');
   };
 
   const participationLabel = "情報コミュニケーション学部島田剛ゼミナール"; // ここで企画名を設定
