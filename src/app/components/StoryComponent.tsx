@@ -134,7 +134,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
                 border: 'none',
                 borderRadius: '5px',
                 padding: '5px 10px',
-                marginLeft: currentStoryIndex > 0 ? 'auto' : '0',
+                marginLeft: 'auto',
               }}
             >
               次へ
