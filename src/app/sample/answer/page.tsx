@@ -18,7 +18,7 @@ export default function ClickLink() {
       padding: '0 20px',
           }}>
       <Image 
-      src="/images/sample.jpg"
+      src="/images/sample_a.jpg"
       width={300}
       height={300}
        alt="Example Image"
@@ -40,7 +40,7 @@ export default function ClickLink() {
         fontFamily: '"Cinzel", serif',                    // 古��なフォント
         transition: 'transform 0.2s',
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
-      }}>戻る</button>
+      }}>ホームに戻る</button>
       </Link>
     </div>
   );

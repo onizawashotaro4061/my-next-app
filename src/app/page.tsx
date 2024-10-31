@@ -55,7 +55,7 @@ export default function ClickLink() {
           START
         </button>
       </a>
-      <a href="/sample">
+      <a href="/sample/question">
       <button style={{
         fontSize: '16px',
         padding: '10px 40px',
