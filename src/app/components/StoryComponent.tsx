@@ -72,7 +72,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm"
           onClick={() => setShowMap(true)}
           style={{
-           
           }}
         >
           MAP
@@ -185,6 +184,8 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
             <Image
               src="/images/campusmap.jpg"
               alt="マップ"
+              width={500} // 必要に応じて適切な幅に変更してください
+              height={300} // 必要に応じて適切な高さに変更してください
               className="w-full h-auto rounded-lg"
             />
           </div>

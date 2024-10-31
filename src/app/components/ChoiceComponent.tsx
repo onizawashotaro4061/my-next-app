@@ -23,6 +23,7 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [showMap, setShowMap] = useState(false)
   const router = useRouter();
 
   const handleAnswerClick = async (answer: number) => {
@@ -60,6 +61,16 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
       height: '100vh',
       padding: '20px 10px',
     }}>
+      <div className="flex justify-start space-x-2 mb-4">
+        <button
+          className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm"
+          onClick={() => setShowMap(true)}
+          style={{
+          }}
+        >
+          MAP
+        </button>
+      </div>
       {/* 画面上部に画像を表示 */}
       <Image src={imageUrl} alt="画像" width={300} height={300} style={{
         marginTop: '50px',
@@ -115,6 +126,26 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
       {/* 不正解のメッセージをボタン全体の下に表示 */}
       {selectedAnswer !== correctAnswer && errorMessage && (
         <p style={{ color: 'red', marginTop: '20px', textAlign: 'center' }}>{errorMessage}</p>
+      )}
+
+      {showMap && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg w-full max-w-md relative">
+            <button
+              className="absolute top-2 right-2 bg-black rounded-full p-3 w-8 h-8 flex items-center justify-center"
+              onClick={() => setShowMap(false)}
+            >
+              ✕
+            </button>
+            <Image
+              src="/images/campusmap.jpg"
+              alt="マップ"
+              width={500} // 必要に応じて適切な幅に変更してください
+              height={300} // 必要に応じて適切な高さに変更してください
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
       )}
     </div>
   );
