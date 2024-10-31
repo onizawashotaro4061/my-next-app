@@ -20,7 +20,7 @@ interface StoryComponentProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void;
   correctKeyword: string[];
-  correctHint: string;
+  correctHint: string[];
   course: string;
   step: number;
   onNext: () => void;
@@ -46,7 +46,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   const handleKeywordSubmit = () => {
     if (correctKeyword.includes(keywordInput)) {
       onNext(); // 正しいキーワードの遷移先
-    } else if (keywordInput === correctHint) {
+    } else if (correctHint.includes(keywordInput)) {
       onHint();
     } else {
       alert('正しいキーワードを入力してください。');

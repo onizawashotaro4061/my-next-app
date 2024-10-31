@@ -9,7 +9,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = ['読み聞かせ'];
-  const correctHint = '読み聞かせ';
+  const correctHint = ['読み聞かせ'];
   // ひらがなも追加する
 
   const stories = [

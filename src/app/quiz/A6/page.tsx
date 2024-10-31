@@ -7,7 +7,7 @@ import StoryComponentNosign from '@/app/components/StoryComponentNosign';
 const Page: React.FC = () => {
   const router = useRouter();
   const correctKeyword = ['mage','MAGE','Mage'];
-  const correctHint = '留学生';
+  const correctHint = ['留学生'];
 
   // ストーリーのデータ
   const stories = [

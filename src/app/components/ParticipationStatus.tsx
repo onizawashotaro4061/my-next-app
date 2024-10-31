@@ -6,7 +6,7 @@ interface ParticipationStatusProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void; // 参加確認のためのコールバック
   correctKeyword: string[];
-  correctHint: string;
+  correctHint: string[];
   onNext: (url: string) => void; // ページ遷移のためのコールバック
   onHint: (url: string) => void;
   participationLabel: string; // 参加する企画の名称
@@ -60,7 +60,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
           step: 1,
         }),
       });
-    } else if(keyword === correctHint) {
+    } else if(correctHint.includes(keyword)) {
       onHint('');
     }else {
       setShowWarning('キーワードが間違っています。もう一度入力してください。');

@@ -17,7 +17,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = ['白地図'];
-  const correctHint = '白地図';
+  const correctHint = ['白地図'];
    
 
   // ストーリーと画像の配列

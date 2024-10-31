@@ -10,7 +10,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = ['自然科学'];
-  const correctHint = '自然科学';
+  const correctHint = ['自然科学'];
 
   // ストーリーと画像の配列
   const stories = [

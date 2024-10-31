@@ -10,7 +10,7 @@ const QuizCourseA: React.FC = () => {
   const router = useRouter();
 
   const correctKeyword = ['マガジン'];
-  const correctHint = 'マガジン';
+  const correctHint = ['マガジン'];
 
   // ストーリーと画像の配列
   const stories = [
