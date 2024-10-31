@@ -43,7 +43,7 @@ const QuizCourseA: React.FC = () => {
   const handleHint = (url: string) => {
     router.push(url);
   };
-  const participationLabel = "模型部";
+  const participationLabel = "";
 
   return (
     <div style={{

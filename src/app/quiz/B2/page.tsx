@@ -6,9 +6,7 @@ import { useRouter } from 'next/navigation';
 import StoryComponentNosign from '@/app/components/StoryComponentNosign';
 
 const Page: React.FC = () => {
-  const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
-
   const correctKeyword = 'はる';
   const correctHint = '師匠';
 

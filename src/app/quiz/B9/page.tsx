@@ -68,8 +68,8 @@ const QuizCourseA: React.FC = () => {
       {/* ストーリーコンポーネントの呼び出し */}
       <StoryComponent
         stories={stories}
-        onParticipationChange={() => {}}
-        onParticipationConfirmed={() => {}}
+        onParticipationChange={handleParticipation}
+        onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
         course="B" // courseを指定
