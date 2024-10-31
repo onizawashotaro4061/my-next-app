@@ -58,6 +58,7 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
       display: 'flex', 
       flexDirection: 'column',
       height: '100vh',
+      padding: '20px 10px',
     }}>
       {/* 画面上部に画像を表示 */}
       <Image src={imageUrl} alt="画像" width={300} height={300} style={{
@@ -72,6 +73,7 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
           padding: '20px',
           backgroundColor: '#f5f5f5',
           color: 'black',
+          marginTop: '20px',
           marginBottom: '10px',
           width: '100%',
         }}
@@ -80,6 +82,8 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
           fontSize: '18px',
           textAlign: 'left',
           }}>
+            問題が現れた！
+            <br />
             正しいと思う番号を押してね！
             <br />
             何回でも解答していただけます

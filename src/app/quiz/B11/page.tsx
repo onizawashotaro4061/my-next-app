@@ -13,20 +13,19 @@ const QuizCourseA: React.FC = () => {
   // ストーリーと画像の配列
   const stories = [
     {
-      text: '【ダンジョン】正解\n\n',
-      image: '/images/QA2a.jpg',
+      text: '【ダンジョン探索度????】\n正解！\n石像が壊れた！周りが光に包まれる。\n\n',
+      image: '/images/QB3a.jpg',
     },
     {
-      text: '魔導書に文字が浮かび上がった。ここに書かれているのは…。「雄大なる氷の精霊にして天を潤わせし氷帝よ！」そう唱えると、魔導書は魔術を放ち大蛇を凍らせた。\n\n',
-      image: '/images/boss.png',
-      overlayImage: '/images/MagicBook.png',
+      text: '「君の旅路に祝福を…」\n\n',
+      image: '/images/SuckedRoom.png',
     },
     {
-      text: '大蛇に勝てたようだ！勝った安心感からか、だんだん眠くなってきた…。\n\n',
-      image: '/images/boss.png',
+      text: '気が付くと、吸い込まれる前の場所にいた。そこに冒険家フクロウの姿はなく、割れた宝石だけが落ちている。勝った安心感からか、だんだん眠くなってきた…。\n\n',
+      image: '/images/cave.png',
     },
     {
-      text: 'ここは…。目が覚めると、元いた世界のベッドの上に寝ていた。なんだ、あれは夢だったのか。 \n\n',
+      text: 'ここは…。目が覚めると、元いた世界のベッドの上に寝ていた。「ホー、ホー…」どこからかフクロウの鳴き声が聞こえた。 \n\n',
       image: '/images/room.jpg',
     },
     { 
@@ -59,8 +58,8 @@ const QuizCourseA: React.FC = () => {
         correctHint={correctHint}
         course="A" // courseを指定
         step={2}   // stepを指定
-        onNext={() => handleNext('/quiz/A10')}  // onNext関数を渡す
-        onHint={() => handleHint('/quiz/A10')} // ヒント時の遷移先を指定
+        onNext={() => handleNext('/quiz/B12')}  // onNext関数を渡す
+        onHint={() => handleHint('/quiz/B12')} // ヒント時の遷移先を指定
         participationLabel={participationLabel}
       />
     </div>
