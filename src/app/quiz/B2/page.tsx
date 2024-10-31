@@ -1,7 +1,6 @@
 // src/app/courseA12/page.tsx
 "use client";
 
-import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import StoryComponentNosign from '@/app/components/StoryComponentNosign';
 
