@@ -7,7 +7,7 @@ import StoryComponent from '@/app/components/StoryComponent';
 
 const QuizCourseA: React.FC = () => {
   const router = useRouter();
-  const correctKeyword = '迷Q伝説';
+  const correctKeyword = ['迷Q伝説'];
   const correctHint = '迷Q伝説';
 
   // ストーリーと画像の配列

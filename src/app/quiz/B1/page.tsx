@@ -16,7 +16,7 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = 'サポーター';
+  const correctKeyword = ['サポーター'];
   const correctHint = 'サポーター';
    
 

@@ -5,7 +5,7 @@ import ClickButton from './ClickButton';
 interface ParticipationStatusProps {
   onParticipationChange: (participated: boolean) => void;
   onParticipationConfirmed: () => void; // 参加確認のためのコールバック
-  correctKeyword: string;
+  correctKeyword: string[];
   correctHint: string;
   onNext: (url: string) => void; // ページ遷移のためのコールバック
   onHint: (url: string) => void;
@@ -47,7 +47,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
   };
 
   const checkKeyword = async () => {
-    if (keyword === correctKeyword) {
+    if (correctKeyword.includes(keyword)) {
       setShowWarning('');
       onNext(''); // 正しいキーワードの場合にページ遷移
       await fetch('/api/keyword', {
