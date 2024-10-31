@@ -28,23 +28,19 @@ const QuizCourseA: React.FC = () => {
     },
   ];
 
-  const handleParticipation = async (participated: boolean) => {
+ const handleParticipation = async (participated: boolean) => {
     setHasParticipated(participated);
-    try {
-      await fetch('/api/participation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          course: 'B',
-          step: 70,
-          participated: participated,
-        }),
-      });
-    } catch (error) {
-      console.error('参加情報の送信に失敗しました:', error);
-    }
+    await fetch('/api/participation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        course: 'サバゲーサークル',
+        step: participated ? 2 : 22,  // 参加時は1、参加していない場合は11
+        participated: participated,
+      }),
+    });
   };
 
   const handleNext = (url: string) => {
@@ -52,7 +48,7 @@ const QuizCourseA: React.FC = () => {
     router.push(url);
   };
 
-  const participationLabel = "落語研究会"; // ここで企画名を設定
+  const participationLabel = "サバゲーサークル"; // ここで企画名を設定
 
   return (
     <div style={{

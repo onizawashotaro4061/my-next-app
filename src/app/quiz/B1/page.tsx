@@ -51,21 +51,17 @@ const QuizCourseA: React.FC = () => {
 
   const handleParticipation = async (participated: boolean) => {
     setHasParticipated(participated);
-    try {
-      await fetch('/api/participation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          course: 'B',
-          step: 1,
-          participated: participated,
-        }),
-      });
-    } catch (error) {
-      console.error('参加情報の送信に失敗しました:', error);
-    }
+    await fetch('/api/participation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        course: '明治大学ボランティア団体Tree',
+        step: participated ? 2 : 22,  // 参加時は1、参加していない場合は11
+        participated: participated,
+      }),
+    });
   };
 
   const handleNext = (url: string) => {

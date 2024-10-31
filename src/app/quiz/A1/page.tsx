@@ -49,23 +49,20 @@ const QuizCourseA: React.FC = () => {
     }
   ];
 
+  // participation count
   const handleParticipation = async (participated: boolean) => {
     setHasParticipated(participated);
-    try {
-      await fetch('/api/participation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          course: 'A',
-          step: 1,
-          participated: participated,
-        }),
-      });
-    } catch (error) {
-      console.error('参加情報の送信に失敗しました:', error);
-    }
+    await fetch('/api/participation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        course: '地理学研究部',
+        step: participated ? 1 : 11,  // 参加時は1、参加していない場合は11
+        participated: participated,
+      }),
+    });
   };
 
   const handleNext = (url: string) => {
@@ -87,7 +84,7 @@ const QuizCourseA: React.FC = () => {
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
-        course="A" // courseを指定
+        course="C" // courseを指定
         step={1}   // stepを指定
         onNext={() => handleNext('/quiz/A2')} 
         onHint={() => handleNext('/quiz/A2')} 

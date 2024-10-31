@@ -46,8 +46,8 @@ const QuizCourseA: React.FC = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        course: 'A',
-        step: 1,
+        course: '情報コミュニケーション学部島田剛ゼミナール',
+        step: participated ? 1 : 11,  // 参加時は1、参加していない場合は11
         participated: participated,
       }),
     });

@@ -44,8 +44,8 @@ const QuizCourseA: React.FC = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        course: 'B',
-        step: 3,
+        course: '第140回明大祭実行委員会渉外局校友部門',
+        step: participated ? 2 : 22,  // 参加時は1、参加していない場合は11
         participated: participated,
       }),
     });

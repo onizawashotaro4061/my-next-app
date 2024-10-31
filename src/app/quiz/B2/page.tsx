@@ -21,24 +21,7 @@ const Page: React.FC = () => {
     }
   ];
 
-  const handleParticipation = async (participated: boolean) => {
-    setHasParticipated(participated);
-    try {
-      await fetch('/api/participation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          course: 'B',
-          step: 2,
-          participated: participated,
-        }),
-      });
-    } catch (error) {
-      console.error('参加情報の送信に失敗しました:', error);
-    }
-  };
+
   // ページ遷移処理
   const handleNext = (url: string) => {
     router.push(url);
@@ -57,8 +40,8 @@ const Page: React.FC = () => {
     }}>
       <StoryComponentNosign
         stories={stories}
-        onParticipationChange={handleParticipation}
-        onParticipationConfirmed={() => console.log('参加が確認されました')}
+        onParticipationChange={() => {}}
+        onParticipationConfirmed={() => {}}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
         course="B" // courseを指定

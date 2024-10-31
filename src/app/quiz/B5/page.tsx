@@ -41,8 +41,8 @@ const QuizCourseA: React.FC = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        course: 'B',
-        step: 5,
+        course: 'フリーペーパー工房',
+        step: participated ? 2 : 22,  // 参加時は1、参加していない場合は11
         participated: participated,
       }),
     });

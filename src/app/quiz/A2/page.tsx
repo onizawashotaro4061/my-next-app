@@ -27,7 +27,7 @@ const Page: React.FC = () => {
     router.push(url);
   };
 
-  const participationLabel = "模型部";
+  const participationLabel = "";
 
   return (
     <div style={{

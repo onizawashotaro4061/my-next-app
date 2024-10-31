@@ -1,11 +1,13 @@
 // src/app/QuizCourseA.tsx
 "use client";
 
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // これは正しいインポートです
 import StoryComponent from '@/app/components/StoryComponent';
 
 
 const QuizCourseA: React.FC = () => {
+  const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
   const correctKeyword = 'MV';
   const correctHint = 'MV';
@@ -35,6 +37,20 @@ const QuizCourseA: React.FC = () => {
     }
   ];
 
+  const handleParticipation = async (participated: boolean) => {
+    setHasParticipated(participated);
+    await fetch('/api/participation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        course: '総合コンテンツ制作サークル',
+        step: participated ? 2 : 22,  // 参加時は1、参加していない場合は11
+        participated: participated,
+      }),
+    });
+  };
   const handleNext = (url: string) => {
     router.push(url);
   };

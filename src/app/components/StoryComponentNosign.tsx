@@ -151,7 +151,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg w-full max-w-md relative">
             <button
-              className="absolute top-2 right-2 bg-black rounded-full p-3 w-8 h-8 flex items-center justify-center"
+              className="absolute top-2 right-2 bg-black rounded-full p-3 w-8 h-8 flex items-center justify-center text-white"
 
               onClick={() => setShowMap(false)}
             >
