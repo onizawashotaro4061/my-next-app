@@ -39,6 +39,8 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   onHint,
   participationLabel,
 }) => {
+  const [showMap, setShowMap] = useState(false)
+  const [showStory, setShowStory] = useState(false)
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
   const [keywordInput, setKeywordInput] = useState('');
   const handleKeywordSubmit = () => {
@@ -61,9 +63,21 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
       setCurrentStoryIndex(currentStoryIndex - 1);
     }
   };
+  
 
   return (
      <div style={{ padding: '20px', height: '100vh'}}>
+      <div className="flex justify-start space-x-2 mb-4">
+        <button
+          className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm"
+          onClick={() => setShowMap(true)}
+          style={{
+           
+          }}
+        >
+          MAP
+        </button>
+      </div>
       <OverlayImageComponent
         baseImage={stories[currentStoryIndex].image}
         overlayImage={stories[currentStoryIndex].overlayImage}
@@ -74,6 +88,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           height: 'auto',
           marginBottom: '10px' }}
       />
+      
 
       <div
         style={{
@@ -155,6 +170,29 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
         />
       )}
       </div>
+      
+
+      {showMap && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg w-full max-w-md relative">
+            <button
+              className="absolute top-2 right-2 bg-black rounded-full p-3 w-8 h-8 flex items-center justify-center"
+
+              onClick={() => setShowMap(false)}
+            >
+              ✕
+            </button>
+            <img
+              src="/images/campusmap.jpg"
+              alt="マップ"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+
+      
+    
     </div>
   );
 };

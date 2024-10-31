@@ -15,7 +15,7 @@ const Page: React.FC = () => {
   // ストーリーのデータ
   const stories = [
     {
-      text: '問題が現れた！ヒントがほしい人は第一校舎314教室へ行って、キーワードを手に入れよう！\n\n',
+      text: '問題が現れた！ヒントがほしい人は第一校舎314教室へ行って、キーワードを手に入れよう！\n\n下のフォームに答えかヒントのキーワードを入力してね\n\n',
       image: '/images/B1.jpg',
       answerFormProps: true,
     }

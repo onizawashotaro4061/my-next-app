@@ -20,8 +20,7 @@ const QuizCourseA: React.FC = () => {
     },
     {
       text: '威力を倍増してくれる杖を手に入れた！これで強い敵にも立ち向かえる。 \n\n',
-      image: '/images/MagicRoom.png',
-      overlayImage: '/images/cane_blue.png',
+      image: '/images/RoomWand.png',
     },
     {
       text: '奥に進んでいくと、大きな門が見えてきた。この門はなんだろう？門を開けると、中から熱風が押し寄せてきた！\n\n',
@@ -36,7 +35,7 @@ const QuizCourseA: React.FC = () => {
       image: '/images/boss.png',
     },
     { 
-      text: 'メディア棟のM405教室へ行って、キーワードを手に入れよう！',
+      text: 'メディア棟M405教室へ行って、キーワードを手に入れよう！',
       image: '/images/boss.png',
       participationStatus: true, // 修正: プロパティ名を変更
     }

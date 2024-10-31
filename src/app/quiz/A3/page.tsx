@@ -19,8 +19,7 @@ const QuizCourseA: React.FC = () => {
     },
     {
       text: '宝箱が開いた！中から謎の魔導書が出てきた。強い魔術が書かれていそうだ。しかし、固く閉ざされていて開かない！とりあえず先に進もう。 \n\n',
-      image: '/images/cave.png',
-      overlayImage: '/images/MagicBook.png',
+      image: '/images/CaveBook.png',
     },
     {
       text: '歩いていると、誰かが住んでいたような部屋を見つけた。\n\n',
@@ -28,13 +27,11 @@ const QuizCourseA: React.FC = () => {
     },
     {
       text: '何かないか探してみると、魔術の威力を上げる杖を見つけた！しかし、杖は封印されているようだ。封印を解くために謎を解こう！\n\n',
-      image: '/images/MagicRoom.png',
-      overlayImage: '/images/cane_purple.png',
+      image: '/images/RoomWand.png',
     },
     {
-      text: 'メディア棟のM516教室へ行って、キーワードを手に入れよう！',
-      image: '/images/MagicRoom.png',
-      overlayImage: '/images/chest.png',
+      text: 'メディア棟M516教室へ行って、キーワードを手に入れよう！\nLS4階とメディア棟4階の連絡通路が使えます。\n\n',
+      image: '/images/RoomWand.png',
       participationStatus: true,
     },
   ];

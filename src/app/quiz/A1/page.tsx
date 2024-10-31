@@ -36,18 +36,15 @@ const QuizCourseA: React.FC = () => {
     },
     {
       text: '街で覚えた氷の魔術でスライムを倒して、宝箱をゲットした！',
-      image: '/images/cave.png',
-      overlayImage: '/images/chest.png',
+      image: '/images/CaveChest.png',
     },
     {
       text: 'しかし、宝箱には謎の魔法がかかっているようだ。問題を解いて宝箱を開けよう！',
-      image: '/images/cave.png',
-      overlayImage: '/images/chest.png',
+      image: '/images/CaveChest.png',
     },
     {
-      text: '和泉ラーニングスクエアのLS506教室へ行って、キーワードを手に入れよう！',
-      image: '/images/cave.png',
-      overlayImage: '/images/chest.png',
+      text: '和泉ラーニングスクエアLS506教室へ行って、キーワードを手に入れよう！',
+      image: '/images/CaveChest.png',
       participationStatus: true,
     }
   ];
