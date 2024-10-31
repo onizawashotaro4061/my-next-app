@@ -24,7 +24,7 @@ const QuizCourseA: React.FC = () => {
   const stories: Story[] = [
     {
       text: 'どこからか鳴き声が聞こえる…。「ホー、ホー…」何かはわからないが、そろそろ起きよう。\n\n',
-      image: '/images/black.png',
+      image: '/images/white_w_trans.png',
     },
     {
       text: '目が覚めたら異世界の知らない王国にいた。そこで、「別世界へ行ける宝石が迷宮にある」という噂が聞こえてきた。 \n\n',

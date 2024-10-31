@@ -24,7 +24,7 @@ const QuizCourseA: React.FC = () => {
   const stories: Story[] = [
     {
       text: 'どこからか声が聞こえる…。「雄大なる氷の精霊――」何かはわからないが、そろそろ起きよう。\n\n',
-      image: '/images/king.png',
+      image: '/images/white_w_trans.png',
     },
     {
       text: '目が覚めたら、異世界の知らない王国の宿にいた。とりあえず街へ出たところ、「別世界へ行けるアイテムが迷宮にある」という噂を聞いた。そのアイテムを手に入れれば、元の世界へ戻れるかもしれない！魔術を覚えて、装備を整えて、いざ、迷宮へ！ \n\n',
