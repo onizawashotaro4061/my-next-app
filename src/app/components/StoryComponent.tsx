@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import OverlayImageComponent from '@/app/components/OverlayImageComponent';
 import AnswerForm from '@/app/components/AnswerForm';
 import ParticipationStatus from '@/app/components/ParticipationStatus';
+import Image from 'next/image';
 
 interface Story {
   text: string;
@@ -40,7 +41,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   participationLabel,
 }) => {
   const [showMap, setShowMap] = useState(false)
-  const [showStory, setShowStory] = useState(false)
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
   const [keywordInput, setKeywordInput] = useState('');
   const handleKeywordSubmit = () => {
@@ -182,7 +182,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
             >
               ✕
             </button>
-            <img
+            <Image
               src="/images/campusmap.jpg"
               alt="マップ"
               className="w-full h-auto rounded-lg"
