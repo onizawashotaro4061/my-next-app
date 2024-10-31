@@ -16,14 +16,14 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = 'ことゆめ';
-  const correctHint = 'ことゆめ';
+  const correctKeyword = 'はる';
+  const correctHint = 'はる';
 
   // ストーリーと画像の配列
   const stories: Story[] = [
     {
       text: '答えを入力しよう！\n\n',
-      image: '/images/A1h.jpg',
+      image: '/images/B1h.jpg',
       participationStatus: true,
     },
   ];
@@ -37,8 +37,8 @@ const QuizCourseA: React.FC = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          course: 'A',
-          step: 1,
+          course: 'B',
+          step: 40,
           participated: participated,
         }),
       });
@@ -52,7 +52,7 @@ const QuizCourseA: React.FC = () => {
     router.push(url);
   };
 
-  const participationLabel = "模型部"; // ここで企画名を設定
+  const participationLabel = "落語研究会"; // ここで企画名を設定
 
   return (
     <div style={{
@@ -66,10 +66,10 @@ const QuizCourseA: React.FC = () => {
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
-        course="A" // courseを指定
-        step={1}   // stepを指定
-        onNext={() => handleNext('/quiz/A3')} 
-        onHint={() => handleNext('/quiz/A3')} // 正しいページ遷移を指定
+        course="B" // courseを指定
+        step={40}   // stepを指定
+        onNext={() => handleNext('/quiz/B4')} 
+        onHint={() => handleNext('/quiz/B4')} // 正しいページ遷移を指定
         participationLabel={participationLabel} // 企画名を渡す
       />
     </div>
