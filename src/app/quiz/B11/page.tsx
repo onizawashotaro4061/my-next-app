@@ -56,7 +56,7 @@ const QuizCourseA: React.FC = () => {
         onParticipationConfirmed={() => {}}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
-        course="A" // courseを指定
+        course="迷Q伝説" // courseを指定
         step={2}   // stepを指定
         onNext={() => handleNext('/quiz/B12')}  // onNext関数を渡す
         onHint={() => handleHint('/quiz/B12')} // ヒント時の遷移先を指定

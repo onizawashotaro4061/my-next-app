@@ -84,7 +84,7 @@ const QuizCourseA: React.FC = () => {
         onParticipationConfirmed={() => console.log('参加が確認されました')}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
-        course="C" // courseを指定
+        course="白地図" // courseを指定
         step={1}   // stepを指定
         onNext={() => handleNext('/quiz/A2')} 
         onHint={() => handleNext('/quiz/A2')} 

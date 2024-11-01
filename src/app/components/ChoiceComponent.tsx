@@ -55,8 +55,8 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
   };
 
   return (
-    <div style={{ 
-      display: 'flex', 
+    <div style={{
+      display: 'flex',
       flexDirection: 'column',
       height: '100vh',
       padding: '20px 10px',

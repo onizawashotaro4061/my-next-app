@@ -14,17 +14,13 @@ interface AnswerFormProps {
 const AnswerForm: React.FC<AnswerFormProps> = ({ keywordInput, setKeywordInput, onSubmit, course, step }) => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
-    // キーワードが正しい場合の処理
     if (keywordInput.trim()) {
-      // Supabaseにキーワードを記録
-      await fetch('/api/keywords', {
+      await fetch('/api/participation', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          keyword: keywordInput.trim(),
           course,
           step,
         }),

@@ -40,8 +40,8 @@ const Page: React.FC = () => {
         onParticipationConfirmed={() => {}}
         correctKeyword={correctKeyword}
         correctHint={correctHint}
-        course="A" // courseを指定
-        step={2}   // stepを指定
+        course="ことゆめ" // courseを指定
+        step={1}   // stepを指定
         onNext={() => handleNext('/quiz/A3')} // 正解時の遷移先を指定
         onHint={() => handleHint('/hint/A3')} // ヒント時の遷移先を指定
         participationLabel={participationLabel} // 企画名を渡す

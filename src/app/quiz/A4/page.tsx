@@ -14,8 +14,8 @@ const Page: React.FC = () => {
       <ChoiceComponent
         imageUrl="/images/QA1.jpg"  // 画面上部に表示する画像のパス
         correctAnswer={4}  // 正解の番号
-        course="A"  // 記録するコース名
-        label="Q1"  // 記録するラベル
+        course="クイズ"  // 記録するコース名
+        label="1"  // 記録するラベル
         successUrl="/quiz/A5"  // 正解時に遷移するURL
       />
     </div>
