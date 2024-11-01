@@ -49,7 +49,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
     } else if (correctHint.includes(keywordInput)) {
       onHint();
     } else {
-      alert('正しいキーワードを入力してください。');
+      alert('正しい言葉を入力してください。');
     }
   };
   const handleNextStory = () => {
@@ -87,7 +87,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           height: 'auto',
           marginBottom: '10px' }}
       />
-      
 
       <div
         style={{
@@ -154,6 +153,8 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           correctHint={correctHint}
           onNext={onNext}
           onHint={onHint}
+          course={course}
+          step={step}
           participationLabel={participationLabel}
         />
       )}
@@ -169,7 +170,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
         />
       )}
       </div>
-      
 
       {showMap && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -189,9 +189,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           </div>
         </div>
       )}
-
-      
-    
     </div>
   );
 };

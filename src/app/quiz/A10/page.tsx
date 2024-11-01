@@ -31,7 +31,6 @@ export default function ClickLink() {
             margin: '10px auto',
           }}>
             クリアおめでとう！
-            <br />ゴール教室（メディア棟M512教室）に向かおう！
           </p>
           <p style={{
             color: 'red',

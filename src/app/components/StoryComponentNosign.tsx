@@ -67,7 +67,6 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
           className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm"
           onClick={() => setShowMap(true)}
           style={{
-           
           }}
         >
           MAP

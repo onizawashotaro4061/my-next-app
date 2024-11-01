@@ -16,8 +16,8 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = ['はる'];
-  const correctHint = ['はる'];
+  const correctKeyword = ['はる','春'];
+  const correctHint = ['はる','春'];
 
   // ストーリーと画像の配列
   const stories: Story[] = [

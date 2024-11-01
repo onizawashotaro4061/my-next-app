@@ -7,6 +7,8 @@ interface ParticipationStatusProps {
   onParticipationConfirmed: () => void; // 参加確認のためのコールバック
   correctKeyword: string[];
   correctHint: string[];
+  course: string;
+  step: number;
   onNext: (url: string) => void; // ページ遷移のためのコールバック
   onHint: (url: string) => void;
   participationLabel: string; // 参加する企画の名称
@@ -17,6 +19,8 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
   onParticipationConfirmed,
   correctKeyword,
   correctHint,
+  course,
+  step,
   onNext,
   onHint,
   participationLabel, // 追加: 参加する企画の名称
@@ -35,8 +39,8 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        course: 'A',
-        step: 1,
+        course: course,
+          step: step,
         participated: participated,
       }),
     });
@@ -56,14 +60,14 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          course: 'A',
-          step: 1,
+          course: course,
+          step: step,
         }),
       });
     } else if(correctHint.includes(keyword)) {
       onHint('');
     }else {
-      setShowWarning('キーワードが間違っています。もう一度入力してください。');
+      setShowWarning('正しい言葉を入力してください。');
     }
   };
 
@@ -102,7 +106,7 @@ const ParticipationStatus: React.FC<ParticipationStatusProps> = ({
             type="text"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            style={{ 
+            style={{
               color: 'black',
               paddingTop: '10px',
               paddingBottom: '10px',
