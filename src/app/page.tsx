@@ -23,8 +23,7 @@ export default function ClickLink() {
        alt="Example Image"
        style={{
           width: '100%',
-          maxWidth: '600px',
-          marginBottom: '20px' }} />
+          maxWidth: '600px', }} />
       <a href="/select-detail" style={{ textDecoration: 'none' }}>
         <button style={{
           fontSize: '24px',
@@ -64,24 +63,25 @@ export default function ClickLink() {
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
-        marginTop: '20px',
-        marginBottom: '10px',
+        marginTop: '30px',
+        marginBottom: '30px',
         fontFamily: '"Cinzel", serif',                    // 古��なフォント
         transition: 'transform 0.2s',
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
       }}>例題</button>
       </a>
-      <p style={{
-        color: 'black',
-        textAlign: 'left',
-        marginTop: '20px',
-        marginBottom: '10px',
-        fontFamily: '"Cinzel", serif',
-        fontWeight: '600',
-      }}>※ご不明な点がございましたら、
-      <br />メディア棟前企画受付に
-      <br />設置されている
-      <br />迷Q伝説本部にお越しください。</p>
-    </div>
+      <div className="w-[70%] bg-white bg-opacity-40 backdrop-blur-sm rounded-lg p-3 border"
+      style={{
+        borderColor: 'blue',
+        backgroundColor: 'white',
+      }}>
+        <p className="text-xs leading-5 text-purple-800 text-left"
+        style={{
+          color: 'black',
+        }}>
+          ご不明な点がございましたら、メディア棟前企画受付に設置されている迷Q伝説本部にお越しください。
+        </p>
+      </div>
+      </div>
   );
 }
