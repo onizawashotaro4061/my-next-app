@@ -41,10 +41,9 @@ model GenderAge {
   age     Int
 }
 
-model ClickCounts {
-  id           Int      @id @default(autoincrement())
-  course       String
-  label        String
-  correctClick Boolean
+model ClickCount {
+  id        Int      @id @default(autoincrement())
+  course    String   @default("default_course") // デフォルト値を設定
+  count     Int      @default(0)
+  createdAt DateTime @default(now())
 }
-

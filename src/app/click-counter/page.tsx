@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import ClickButton from '../components/ClickButton';
+import ClickButton from '@/app/components/ClickButton';
 import Image from 'next/image';
 
 const ClickCounterPage: React.FC = () => {

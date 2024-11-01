@@ -30,7 +30,7 @@ const QuizCourseA: React.FC = () => {
       image: '/images/RoomWand.png',
     },
     {
-      text: 'メディア棟M516教室へ行って、キーワードを手に入れよう！\nLS4階とメディア棟4階の連絡通路が使えます。\n\n',
+      text: 'メディア棟M516教室へ行って、キーワードを手に入れよう！\n\nLS4階とメディア棟4階をつなぐ連絡通路が使えます。\n\n',
       image: '/images/RoomWand.png',
       participationStatus: true,
     },

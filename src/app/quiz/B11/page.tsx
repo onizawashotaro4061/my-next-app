@@ -29,7 +29,7 @@ const QuizCourseA: React.FC = () => {
       image: '/images/room.jpg',
     },
     { 
-      text: 'ゴール教室（メディア棟M512教室）に行って、最後のキーワードを手に入れよう！',
+      text: 'ゴール教室（メディア棟M512教室）に行って、最後のキーワードを手に入れよう！\n\nLS4階とメディア棟4階をつなぐ連絡通路が使えます。\n\n',
       image: '/images/room.jpg',
      answerFormProps: true,
     }

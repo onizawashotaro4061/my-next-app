@@ -17,6 +17,14 @@ export default function ClickLink() {
       color: '#fff',
       padding: '0 20px',
           }}>
+            <Image 
+      src="/images/logo_transparent.png"
+      width={300}
+      height={300}
+       alt="Example Image"
+       style={{
+          width: '50%',
+          maxWidth: '600px',}} />
       <Image 
       src="/images/sample.jpg"
       width={300}
@@ -25,7 +33,7 @@ export default function ClickLink() {
        style={{
           width: '100%',
           maxWidth: '600px',
-          marginBottom: '20px' }} />
+          marginBottom: '50px' }} />
       <Link href="/sample/answer">
       <button style={{
         fontSize: '16px',
@@ -36,7 +44,7 @@ export default function ClickLink() {
         borderRadius: '5px',
         cursor: 'pointer',
         marginTop: '20px',
-        marginBottom: '10px',
+        marginBottom: '100px',
         fontFamily: '"Cinzel", serif',                    // 古��なフォント
         transition: 'transform 0.2s',
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
