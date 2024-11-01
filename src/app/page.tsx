@@ -71,6 +71,17 @@ export default function ClickLink() {
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト
       }}>例題</button>
       </a>
+      <p style={{
+        color: 'black',
+        textAlign: 'left',
+        marginTop: '20px',
+        marginBottom: '10px',
+        fontFamily: '"Cinzel", serif',
+        fontWeight: '600',
+      }}>※ご不明な点がございましたら、
+      <br />メディア棟前企画受付に
+      <br />設置されている
+      <br />迷Q伝説本部にお越しください。</p>
     </div>
   );
 }
