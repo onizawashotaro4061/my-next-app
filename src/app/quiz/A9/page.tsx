@@ -13,7 +13,7 @@ const QuizCourseA: React.FC = () => {
   // ストーリーと画像の配列
   const stories = [
     {
-      text: '【ダンジョン】正解\n\n',
+      text: '【ダンジョン進行度????】正解！\n\n',
       image: '/images/QA2a.jpg',
     },
     {

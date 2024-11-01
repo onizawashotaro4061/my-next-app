@@ -97,8 +97,11 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
             <br />
             正しいと思う番号を押してね！
             <br />
-            何回でも解答していただけます
-        </p>
+            </p>
+        <p style={{ 
+          fontSize: '15px',
+          textAlign: 'left',
+          }}>＊何回でも解答していただけます</p>
       </div>
 
       {/* 画面下部に5つのボタンを表示 */}

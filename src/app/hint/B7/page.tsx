@@ -48,7 +48,7 @@ const QuizCourseA: React.FC = () => {
     router.push(url);
   };
 
-  const participationLabel = "サバゲーサークル"; // ここで企画名を設定
+  const participationLabel = "サバイバルゲームサークル"; // ここで企画名を設定
 
   return (
     <div style={{

@@ -16,7 +16,7 @@ const QuizCourseA: React.FC = () => {
   const stories = [
     {
       text: '【ダンジョン進行度★★★☆】\n正解！\n\n',
-      image: '/images/QA2a.jpg',
+      image: '/images/A2a.jpg',
     },
     {
       text: 'バリアを壊せた！攻撃は効いているようだ！ しかし、大蛇の反撃で頭がクラクラする…。\n\n',
