@@ -96,6 +96,21 @@ export default function SelectDetail() {
         >
           女性
         </button>
+        <button 
+          onClick={() => setGender('無回答')}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: gender === '無回答' ? '#9ACD32' : '#e0e0e0',
+            color: gender === '無回答' ? '#ffffff' : '#000000',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease',
+          }}
+        >
+          無回答
+        </button>
+        
       </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <input
