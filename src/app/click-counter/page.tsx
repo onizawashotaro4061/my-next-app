@@ -26,10 +26,14 @@ const ClickCounterPage: React.FC = () => {
 
   return (
    <div style={{ 
-    textAlign: 'center', 
-    background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)', 
-    padding: '20px', 
-    height: '100vh',
+    display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',
+      padding: '20px',
+      height: '100vh',
+      color: '#333',
     }}>
       {/* ページ上部の画像 */}
        <Image src="/images/logo_transparent.png" 
@@ -39,21 +43,41 @@ const ClickCounterPage: React.FC = () => {
           width: '100%',
           height: 'auto',
           marginBottom: '20px' }} />
-          <p style={{ 
-        marginBottom: '10px',
-        color: 'black',
-        fontSize: '20px',
-        }}>魔術師：【閉ざされた氷の魔導書】</p>
-          <p style={{ 
+      <p style={{
+         marginBottom: '15px',
+        color: '#333',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      }}>
+        <span style={{
+          color: 'red',
+        }}>
+        魔術師</span>
+        ：【閉ざされた氷の魔導書】
+      </p>
+      <p style={{
+        marginBottom: '15px',
+        color: '#333',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      }}>
+        <span style={{
+          color: 'blue',
+        }}>
+        冒険家</span>
+        ：【フクロウと呪いの宝石】
+      </p>
+      <h1 style={{
         marginBottom: '20px',
-        color: 'black',
+        color: '#333',
         fontSize: '20px',
-        }}>冒険家：【フクロウと呪いの宝石】</p>
-    <h1 style={{ 
-        marginBottom: '20px',
-        color: 'black',
-        fontSize: '20px',
-        }}>あなたがなりたい職業を選んでね！</h1>
+        fontWeight: 'bold',
+        textAlign: 'center',
+      }}>
+        あなたがなりたい職業を選んでね！
+      </h1>
       {/* ボタンの配置 */}
       <div style={{
         display: 'flex',

@@ -63,10 +63,13 @@ export default function SelectDetail() {
           marginBottom: '20px' }} />
 
       <h1 style={{ 
-        marginBottom: '20px',
-        color: 'black',
-        fontSize: '20px',
-        }}>あなたのことを教えてね</h1>
+        fontSize: '24px', 
+        fontWeight: 'bold', 
+        color: '#4B0082', 
+        marginBottom: '30px'
+      }}>
+        あなたのことを教えてね
+      </h1>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
         <button 
           onClick={() => setGender('男性')}
@@ -131,7 +134,7 @@ export default function SelectDetail() {
         onClick={handleSubmit} 
         disabled={loading} 
         style={{ 
-          padding: '10px 20px', 
+          padding: '10px 70px', 
           backgroundColor: '#0070f3', 
           color: '#ffffff', 
           border: 'none', 
