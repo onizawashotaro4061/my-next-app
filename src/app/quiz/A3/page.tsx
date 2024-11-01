@@ -8,8 +8,8 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = ['読み聞かせ'];
-  const correctHint = ['読み聞かせ'];
+  const correctKeyword = ['読み聞かせ','よみきかせ','よみ聞かせ','読みきかせ'];
+  const correctHint = ['読み聞かせ','よみきかせ','よみ聞かせ','読みきかせ'];
   // ひらがなも追加する
 
   const stories = [

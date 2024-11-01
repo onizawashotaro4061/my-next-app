@@ -9,8 +9,8 @@ import StoryComponent from '@/app/components/StoryComponent';
 const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
-  const correctKeyword = ['MV'];
-  const correctHint = ['MV'];
+  const correctKeyword = ['MV','mv'];
+  const correctHint = ['MV','mv'];
 
   // ストーリーと画像の配列
   const stories = [
