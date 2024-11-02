@@ -39,7 +39,7 @@ const QuizCourseA: React.FC = () => {
       image: '/images/SuckedRoom.png',
     },
     { 
-      text: '和泉ラーニングスクエアLS401教室へ行って、キーワードを手に入れよう！\n\n※LS4階とメディア棟4階は、連絡通路があります。ぜひお使いください。\n\n',
+      text: '和泉ラーニングスクエアLS401教室へ行って、キーワードを手に入れよう！\n\n※和泉ラーニングスクエア4階とメディア棟4階は、連絡通路があります。ぜひお使いください。\n\n',
       image: '/images/SuckedRoom.png',
       participationStatus: true, // 修正: プロパティ名を変更
     }
