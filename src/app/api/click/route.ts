@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 
   try {
     const click = await prisma.click.upsert({
-      where: { id: course === 'A' ? 1 : 2 }, // Aコースはid=1、Bコースはid=2
+      where: { id: course === "A" ? 1 : course === "B" ? 2 : 3 }, // Aコースはid=1、Bコースはid=2
       update: { count: { increment: 1 } },
       create: { count: 1, course: course }, // labelは適宜使用
     });
