@@ -15,7 +15,7 @@ const QuizCourseA: React.FC = () => {
   const stories = [
     {
       text: '【ダンジョン探索度★☆☆☆☆】\n正解！ \n\n',
-      image: '/images/B1a.jpg',
+      image: '/images/QD1a.jpg',
     },
     {
       text: '宝箱が開いた！中から短剣が出てきた。短剣を装備して、先に進もう。 \n\n',

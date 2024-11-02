@@ -9,14 +9,14 @@ const QuizCourseA: React.FC = () => {
   const [, setHasParticipated] = useState<boolean | null>(null);
   const router = useRouter();
 
-  const correctKeyword = ['マガジン','まがじん','magazine'];
-  const correctHint = ['マガジン','まがじん','magazine'];
+  const correctKeyword = ['スナイパー','すないぱー'];
+  const correctHint = ['スナイパー','すないぱー'];
 
   // ストーリーと画像の配列
   const stories = [
     {
       text: '【ダンジョン探索度★★☆☆☆】\n正解！ \n\n',
-      image: '/images/QD1a.jpg',
+      image: '/images/B1a.jpg',
     },
     {
       text: '滝が二手に割れた！滝に近づくと、奥に人が一人通れそうな穴を見つけた。誰かに見られている気がするが、前へ進もう！ \n\n',

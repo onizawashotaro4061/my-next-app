@@ -7,7 +7,7 @@ import StoryComponentNosign from '@/app/components/StoryComponentNosign';
 const Page: React.FC = () => {
   const router = useRouter();
   const correctKeyword = ['はる','春'];
-  const correctHint = ['師匠','ししょう'];
+  const correctHint =  ['はる','春'];
 
   // ストーリーのデータ
   const stories = [
@@ -25,7 +25,7 @@ const Page: React.FC = () => {
   };
 
 
-  const participationLabel = "あ";
+  const participationLabel = "";
 
   return (
     <div style={{
