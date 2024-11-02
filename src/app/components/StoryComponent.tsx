@@ -66,7 +66,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
   
 
   return (
-     <div style={{ padding: '20px', height: '100vh'}}>
+     <div style={{ padding: '20px',minHeight: '100vh'}}>
       <div className="flex justify-start space-x-2 mb-4">
         <button
           className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm"
