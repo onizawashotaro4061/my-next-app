@@ -9,7 +9,7 @@ const Page: React.FC = () => {
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
-      height: '100vh',
+      height: '',
     }}>
       <ChoiceComponent
         imageUrl="/images/QB1.jpg"  // 画面上部に表示する画像のパス

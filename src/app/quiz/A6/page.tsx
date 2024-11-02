@@ -32,7 +32,7 @@ const Page: React.FC = () => {
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
-      height: '100vh',
+      height: '',
     }}>
       <StoryComponentNosign
         stories={stories}
