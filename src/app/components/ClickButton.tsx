@@ -9,7 +9,7 @@ interface ClickButtonProps {
 
 const ClickButton: React.FC<ClickButtonProps> = ({ onClick, label, color }) => {
   const handleClick = async () => {
-    const course = label === "魔術師" ? "A" : label === "冒険家" ? "B" : "C";
+    const course = label === "魔術師" ? "A" : "B"; // labelからcourseに変換
 
     const res = await fetch('/api/click', {
       method: 'POST',
