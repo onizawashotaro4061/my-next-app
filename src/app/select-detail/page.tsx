@@ -51,7 +51,7 @@ export default function SelectDetail() {
       textAlign: 'center',
       background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',
       padding: '20px', 
-      height: '100vh'
+      minHeight: '100vh'
       }}>
         
       <Image src="/images/logo_transparent.png"
@@ -118,15 +118,16 @@ export default function SelectDetail() {
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <input
           type="number"
-          placeholder="年齢を入力してください"
+          placeholder="年齢を入力する"
           value={age}
           onChange={(e) => setAge(e.target.value)}
           style={{
-            padding: '10px',
+            padding: '10px 40px',
             border: '1px solid #ccc',
             borderRadius: '5px',
             textAlign: 'center',
             color: 'black',
+
           }}
         />
       </div>

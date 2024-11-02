@@ -8,7 +8,7 @@ export default function ClickLink() {
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',  // 中央が薄紫、上下が水色
-      height: '100vh',
+      minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -48,7 +48,7 @@ export default function ClickLink() {
         borderRadius: '5px',
         cursor: 'pointer',
         marginTop: '20px',
-        marginBottom: '10px',
+        marginBottom: '30px',
         fontFamily: '"Cinzel", serif',                    // 古��なフォント
         transition: 'transform 0.2s',
         textShadow: '0 0 5px #87cefa',                  // ���色の発光テキスト

@@ -32,7 +32,7 @@ const ClickCounterPage: React.FC = () => {
       justifyContent: 'center',
       background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',
       padding: '20px',
-      height: '100vh',
+      minHeight: '100vh',
       color: '#333',
     }}>
       {/* ページ上部の画像 */}

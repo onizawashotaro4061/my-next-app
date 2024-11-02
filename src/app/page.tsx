@@ -7,7 +7,7 @@ export default function ClickLink() {
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #87CEFA, #DDA0DD 40%, #DDA0DD 60%, #87CEFA)',  // 中央が薄紫、上下が水色
-      height: '100vh',
+      minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -74,6 +74,7 @@ export default function ClickLink() {
       style={{
         borderColor: 'blue',
         backgroundColor: 'white',
+        marginBottom: '20px',
       }}>
         <p className="text-xs leading-5 text-purple-800 text-left"
         style={{
