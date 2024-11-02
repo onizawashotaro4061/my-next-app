@@ -33,7 +33,7 @@ const QuizCourseA: React.FC = () => {
     { 
       text: '和泉ラーニングスクエアLS304教室へ行って、キーワードを手に入れよう！',
       image: '/images/SuckedRoom.png',
-     answerFormProps: true,
+     participationStatus: true,
     }
   ];
 
