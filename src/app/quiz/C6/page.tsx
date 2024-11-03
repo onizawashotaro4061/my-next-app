@@ -40,7 +40,7 @@ const Page: React.FC = () => {
         course="mage" // courseを指定
         step={3}   // stepを指定
         onNext={() => handleNext('/quiz/C7')} // 正解時の遷移先を指定
-        onHint={() => handleNext('/quiz/C7')} // ヒント時の遷移先を指定
+        onHint={() => handleNext('/hint/C7')} // ヒント時の遷移先を指定
         participationLabel={participationLabel}
       />
     </div>
