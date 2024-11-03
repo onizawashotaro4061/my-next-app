@@ -49,7 +49,7 @@ const QuizCourseA: React.FC = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        course: '明治大学ボランティア団体Tree',
+        course: '絵本工房',
         step: participated ? 3 : 33,  // 参加時は1、参加していない場合は11
         participated: participated,
       }),
@@ -64,7 +64,7 @@ const QuizCourseA: React.FC = () => {
   };
 
 
-  const participationLabel = "明治大学ボランティア団体Tree"; // ここで企画名を設定
+  const participationLabel = "絵本工房"; // ここで企画名を設定
   return (
     <div style={{
       background: 'linear-gradient(to bottom, #e0bbff 50%, #add8e6 100%)',
