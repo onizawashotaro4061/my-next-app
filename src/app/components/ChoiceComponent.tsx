@@ -72,7 +72,7 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
         </button>
       </div>
       {/* 画面上部に画像を表示 */}
-      <Image src={imageUrl} alt="画像" width={300} height={300} style={{
+      <Image src={imageUrl} alt="画像" width={500} height={500} style={{
         marginTop: '50px',
         maxHeight: '80%',
         maxWidth: '100%',
@@ -144,7 +144,7 @@ const ChoiceComponent: React.FC<ChoiceComponentProps> = ({
               src="/images/campusmap.jpg"
               alt="マップ"
               width={500} // 必要に応じて適切な幅に変更してください
-              height={300} // 必要に応じて適切な高さに変更してください
+              height={500} // 必要に応じて適切な高さに変更してください
               className="w-full h-auto rounded-lg"
             />
           </div>

@@ -160,7 +160,7 @@ const StoryComponent: React.FC<StoryComponentProps> = ({
               src="/images/campusmap.jpg"
               alt="マップ"
               width={500} // 必要に応じて適切な幅に変更してください
-              height={300} // 必要に応じて適切な高さに変更してください
+              height={500} // 必要に応じて適切な高さに変更してください
               className="w-full h-auto rounded-lg"
             />
           </div>

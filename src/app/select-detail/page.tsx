@@ -55,8 +55,8 @@ export default function SelectDetail() {
       }}>
         
       <Image src="/images/logo_transparent.png"
-      width={300}
-       height={300}
+      width={500}
+       height={500}
       alt="Example Image" style={{
           width: '100%',
           height: 'auto',

@@ -37,8 +37,8 @@ const ClickCounterPage: React.FC = () => {
     }}>
       {/* ページ上部の画像 */}
        <Image src="/images/logo_transparent.png" 
-       width={300}
-       height={300}
+       width={500}
+       height={500}
        alt="Example Image" style={{
           width: '100%',
           height: 'auto',

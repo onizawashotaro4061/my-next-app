@@ -19,8 +19,8 @@ export default function ClickLink() {
           }}>
       <Image
       src="/images/ClearA.png"
-      width={300}
-      height={300}
+      width={500}
+      height={500}
        alt="Example Image"
        style={{
           width: '100%',

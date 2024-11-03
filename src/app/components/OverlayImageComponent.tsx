@@ -22,8 +22,8 @@ const OverlayImageComponent: React.FC<OverlayImageComponentProps> = ({
       <Image
         src={baseImage}
         alt={altText}
-        width={300}
-       height={300}
+        width={500}
+       height={500}
         style={{ width: '100%', height: 'auto', 
           // borderRadius: '8px' 
         }}
