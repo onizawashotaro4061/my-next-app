@@ -13,7 +13,7 @@ const Page: React.FC = () => {
   const stories = [
     {
       text: '問題が現れた！ヒントが欲しい人は第一校舎306教室へ行って、キーワードを手に入れよう！！\n\n下のフォームに答えかヒントのキーワードを入力してね\n\n',
-      image: '/images/A2h.jpg',
+      image: '/images/A2.jpg',
       answerFormProps: true,
     }
   ];

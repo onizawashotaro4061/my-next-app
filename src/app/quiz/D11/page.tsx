@@ -14,7 +14,7 @@ const QuizCourseA: React.FC = () => {
   const stories = [
     {
       text: '【ダンジョン探索度????】\n正解！\n石像が壊れた！周りが光に包まれる。\n\n',
-      image: '/images/QB3a.jpg',
+      image: '/images/QD3a.jpg',
     },
     {
       text: '「君の旅路に祝福を…」\n\n',

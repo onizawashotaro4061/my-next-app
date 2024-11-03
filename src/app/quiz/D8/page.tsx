@@ -12,7 +12,7 @@ const Page: React.FC = () => {
       height: '',
     }}>
       <ChoiceComponent
-        imageUrl="/images/QB2.jpg"  // 画面上部に表示する画像のパス
+        imageUrl="/images/QD2.jpg"  // 画面上部に表示する画像のパス
         correctAnswer={3}  // 正解の番号
         course="B"  // 記録するコース名
         label="Q2"  // 記録するラベル

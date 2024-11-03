@@ -10,6 +10,7 @@ const Page: React.FC = () => {
   const correctHint =  ['はる','春'];
 
   // ストーリーのデータ
+  //incorrect
   const stories = [
     {
       text: '問題が現れた！\n\n下のフォームに答えを入力してね\n\n',
