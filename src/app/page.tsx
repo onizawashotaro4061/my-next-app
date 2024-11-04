@@ -24,7 +24,7 @@ export default function ClickLink() {
        style={{
           width: '100%',
           maxWidth: '600px', }} />
-      <a href="/select-detail" style={{ textDecoration: 'none' }}>
+      <a href="https://line.me/R/ti/p/@659ygqtv#~" style={{ textDecoration: 'none' }}>
         <button style={{
           fontSize: '24px',
           padding: '15px 50px',
