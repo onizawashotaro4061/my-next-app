@@ -35,10 +35,8 @@ export default function SelectDetail() {
       if (response.ok) {
         router.push('/click-counter');
       } else {
-        alert('送信に失敗しました。再試行してください。');
+       router.push('/click-counter');
       }
-    } else {
-      alert('性別と年齢を入力してください。');
     }
   };
 

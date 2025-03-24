@@ -1,45 +1,30 @@
-"use client";
+// src/app/components/ClickButton.tsx
+import React from 'react';
 
-interface ClickButtonProps {
+type ClickButtonProps = {
   onClick: () => void;
   count: number;
-  label: string; // フロントエンドでの表示用
-  color: string;
-}
+  label: string;
+  color?: string;
+};
 
-const ClickButton: React.FC<ClickButtonProps> = ({ onClick, label, color }) => {
-  const handleClick = async () => {
-    const course = label === "魔術師" ? "A" : "B"; // labelからcourseに変換
-
-    const res = await fetch('/api/click', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ course }), // labelではなくcourseを送信
-    });
-    const data = await res.json();
-    
-    if (res.ok) {
-      onClick(); // クリック数を更新する関数を呼び出す
-    } else {
-      console.error('Error:', data.error);
-    }
-  };
-
+const ClickButton: React.FC<ClickButtonProps> = ({ onClick, count, label, color = 'black' }) => {
   return (
-    <div>
-      <button  onClick={handleClick} 
-        style={{ 
-          backgroundColor: color, 
-          color: '#fff', 
-          padding: '10px 20px', 
-          border: 'none', 
-          borderRadius: '5px', 
-          cursor: 'pointer',
-          marginTop: '10px', }}>
-          {label}</button>
-    </div>
+    <button
+      onClick={onClick}
+      style={{
+        padding: '15px 30px',
+        fontSize: '18px',
+        backgroundColor: color,
+        color: '#fff',
+        border: 'none',
+        borderRadius: '10px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s',
+      }}
+    >
+      {label}
+    </button>
   );
 };
 

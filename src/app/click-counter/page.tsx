@@ -14,18 +14,18 @@ const ClickCounterPage: React.FC = () => {
     const newCounts = [...clickCounts];
     newCounts[0] += 1;
     setClickCounts(newCounts);
-    router.push('/quiz/C1');
+    router.push('/quiz/A1');
   };
 
   const handleClickB = async () => {
     const newCounts = [...clickCounts];
     newCounts[1] += 1;
     setClickCounts(newCounts);
-    router.push('/quiz/D1');
+    router.push('/quiz/B1');
   };
 
   return (
-   <div style={{ 
+   <div style={{
     display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
