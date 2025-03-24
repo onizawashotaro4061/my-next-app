@@ -8,7 +8,7 @@ type ClickButtonProps = {
   color?: string;
 };
 
-const ClickButton: React.FC<ClickButtonProps> = ({ onClick, count, label, color = 'black' }) => {
+const ClickButton: React.FC<ClickButtonProps> = ({ onClick, label, color = 'black' }) => {
   return (
     <button
       onClick={onClick}
